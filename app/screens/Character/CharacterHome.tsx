@@ -2,14 +2,17 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ThemedText } from '@components/Text/ThemedText'
 import Button from '@components/Button/Button'
+import { useCustomTheme } from 'contexts/ThemeContext'
+import Box from '@components/Box/Box'
 
 const CharacterHome = () => {
+	const { handleSetTheme } = useCustomTheme();
 	return (
-		<View>
-			<Text>Test Screen for buttons and componets</Text>
-			<ThemedText darkColor=''>Hello World</ThemedText>
-			<Button variant={''} onPress={() => alert("HELLO")}>Hello</Button>
-		</View>
+		<Box>
+			<ThemedText>Test Screen for buttons and componets</ThemedText>
+			<ThemedText>Hello World</ThemedText>
+			<Button onPress={() => handleSetTheme()} variant={'danger'}>Hello</Button>
+		</Box>
 	)
 }
 

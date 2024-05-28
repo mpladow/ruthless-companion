@@ -1,16 +1,16 @@
-import { DefaultTheme } from '@react-navigation/native';
+import { DefaultTheme, Theme } from '@react-navigation/native';
 import { colors } from './colors';
+import { CustomTheme } from 'contexts/ThemeContext';
 
-export const DarkTheme = {
-	...DefaultTheme,
-	dark: true,
+export const LightTheme: CustomTheme = {
+	dark: false,
 	colors: {
-		...DefaultTheme.colors,
-		primary: colors.rust,
+		primary: colors.rust.DEFAULT,
 		background: colors.ivory.DEFAULT,
 		card: colors.ivory[700],
 		text: colors.black.DEFAULT,
 		border: colors.rust[700],
-		notification: colors.tea_green.DEFAULT
+		notification: colors.tea_green.DEFAULT,
+		danger: colors.rust[800]
 	}
 }

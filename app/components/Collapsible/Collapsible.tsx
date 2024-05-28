@@ -3,7 +3,7 @@ import { PropsWithChildren, useState } from 'react';
 import { StyleSheet, TouchableOpacity, useColorScheme } from 'react-native';
 
 import { Colors } from 'constants/Colors';
-import { ThemedView } from '@components/Box/ThemedView';
+import { ThemedView } from '@components/Box/Box';
 import { ThemedText } from '@components/Text/ThemedText';
 
 export function Collapsible({ children, title }: PropsWithChildren & { title: string }) {

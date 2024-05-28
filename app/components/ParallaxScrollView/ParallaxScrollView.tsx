@@ -1,4 +1,4 @@
-import { ThemedView } from '@components/Box/ThemedView';
+import { ThemedView } from '@components/Box/Box';
 import type { PropsWithChildren, ReactElement } from 'react';
 import { StyleSheet, useColorScheme } from 'react-native';
 import Animated, {
