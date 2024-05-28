@@ -12,9 +12,6 @@
 			],
 			"@hooks/*": [
 				"./hooks/*"
-			],
-			"@constants/*": [
-				"./constants"
 			]
 		}
 	},
