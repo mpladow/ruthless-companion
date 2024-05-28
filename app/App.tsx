@@ -1,22 +1,19 @@
 import Button from '@components/Button/Button';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import MainTabNavigator from 'navigation/TabNavigation/MainTabNavigator';
 import { StyleSheet, Text, View } from "react-native";
 
 const HomeTab = createBottomTabNavigator();
 const App = () => {
 	return (
-		<NavigationContainer>
-			<HomeTab.Navigator>
-				<View style={styles.container}>
-					<View style={styles.main}>
-						<Text style={styles.title}>Hello Poo World</Text>
-						<Text style={styles.subtitle}>This is the first page of your app.</Text>
-					</View>
-					<Button />
-				</View>
-			</HomeTab.Navigator>
-		</NavigationContainer>
+		// <View style={styles.container}>
+		// 	<View style={styles.main}>
+		// 		<Text style={styles.title}>Hello Poo World</Text>
+		// 		<Text style={styles.subtitle}>This is the first page of your app.</Text>
+		// 	</View>
+		// 	<Button />
+		// </View>
+		<MainTabNavigator />
 	);
 }
 
