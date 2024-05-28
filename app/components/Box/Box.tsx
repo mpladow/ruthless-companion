@@ -1,7 +1,7 @@
 import { type ViewProps } from 'react-native';
 
 import styled from 'styled-components/native';
-import { padding } from 'theme/padding';
+import { padding } from 'constants/padding';
 
 export type ThemedViewProps = ViewProps & {
 	lightColor?: string;

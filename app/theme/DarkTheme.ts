@@ -11,6 +11,10 @@ export const DarkTheme: CustomTheme = {
 		text: colors.ivory.DEFAULT,
 		border: colors.rust[700],
 		notification: colors.tea_green.DEFAULT,
-		danger: colors.rust[400]
+		danger: colors.rust[400],
+		icon: colors.rust.DEFAULT,
+		disabled: colors.ivory[400],
+		tabIconDefault: colors.rust.DEFAULT,
+		tabIconSelected: colors.cambridge_blue.DEFAULT,
 	}
 }

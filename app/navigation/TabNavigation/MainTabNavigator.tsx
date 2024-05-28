@@ -10,7 +10,7 @@ import { LightTheme } from 'theme/LightTheme';
 const HomeTab = createBottomTabNavigator();
 
 const MainTabNavigator = () => {
-	const { theme } = useCustomTheme();
+	const { theme, currentTheme } = useCustomTheme();
 
 	const themeSwitchMemo = useMemo(() => {
 		console.log(`them being switched to  ${theme}`);
@@ -18,9 +18,8 @@ const MainTabNavigator = () => {
 	}, [theme])
 
 	return (
-		<NavigationContainer independent={true} theme={themeSwitchMemo}>
-
-			<HomeTab.Navigator screenOptions={{ headerShown: false }}>
+		<NavigationContainer independent={true} theme={currentTheme}>
+			<HomeTab.Navigator screenOptions={{ headerShown: false, tabBarStyle: { backgroundColor: currentTheme.colors.background, borderTopColor: currentTheme.colors.disabled } }}>
 				<HomeTab.Screen name="CharacterStack" component={CharacterStack} />
 				<HomeTab.Screen name="CharacterStack2" component={CharacterStack} />
 			</HomeTab.Navigator>

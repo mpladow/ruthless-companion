@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react'
 import { ThemedText } from '@components/Text/ThemedText';
 import styled, { ThemeProvider, css } from 'styled-components/native';
 import { useCustomTheme } from 'contexts/ThemeContext';
+import { BorderRadius } from 'constants/BorderRadius';
 
 export type VariantType = "primary" | "secondary" | "success" | "danger" | "warning" | "info"
 
@@ -15,17 +16,15 @@ const StyledButton = styled.Pressable<{ variant: VariantType }>`
 border-radius: 3px;
 border: 2px solid #BF4F74;
 padding: 4px;
+border-radius: ${BorderRadius.lg}px
 ${(props) => props.variant == "primary" &&
 		css`
-		background-color: ${props.theme.colors.notification};
+		background-color: ${props.theme.colors.primary};
 ` } ;
 
 ${(props) => props.variant == "danger" &&
-		props.theme.dark ? css`
-		background-color:  ${props.theme.colors?.danger};
-` :
 		css`
-		background-color: ${props.theme.colors?.danger};
+		background-color:  ${props.theme.colors?.danger};
 `
 	};
 `
@@ -35,7 +34,7 @@ const Button = ({ variant, children, onPress }: ButtonType) => {
 	const { currentTheme } = useCustomTheme()
 
 	const renderChild = () => {
-		return typeof children == 'string' ? <ThemedText>{children}</ThemedText> : children
+		return typeof children == 'string' ? <ThemedText style={{ textAlign: 'center' }}>{children}</ThemedText> : children
 	}
 	return (
 		<ThemeProvider theme={currentTheme}>

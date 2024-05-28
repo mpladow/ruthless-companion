@@ -13,6 +13,10 @@ interface CustomColors {
 	border: string;
 	notification: string;
 	danger: string;
+	icon: string,
+	disabled: string;
+	tabIconDefault: string,
+	tabIconSelected: string,
 }
 export interface CustomTheme {
 	dark: boolean;

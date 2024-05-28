@@ -11,6 +11,10 @@ export const LightTheme: CustomTheme = {
 		text: colors.black.DEFAULT,
 		border: colors.rust[700],
 		notification: colors.tea_green.DEFAULT,
-		danger: colors.rust[800]
+		danger: colors.rust[800],
+		icon: colors.rust.DEFAULT,
+		disabled: colors.ivory[400],
+		tabIconDefault: colors.rust.DEFAULT,
+		tabIconSelected: colors.cambridge_blue.DEFAULT,
 	}
 }
