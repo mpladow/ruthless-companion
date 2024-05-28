@@ -17,6 +17,6 @@ const StyledView = styled.View<BoxProps>`
 `
 
 export default Box;
-export function Box({ style, lightColor, darkColor, ...otherProps }: ThemedViewProps) {
+export function Box({ style, ...otherProps }: ThemedViewProps) {
 	return <StyledView style={[style]} {...otherProps} />;
 }
