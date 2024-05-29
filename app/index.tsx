@@ -1,19 +1,22 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import App from './App';
-import { NavigationContainer } from '@react-navigation/native';
-import { ThemeContextProvider, useCustomTheme } from 'contexts/ThemeContext';
-import { useCallback, useEffect, useMemo } from 'react';
-import { DarkTheme } from 'theme/DarkTheme';
-import { LightTheme } from 'theme/LightTheme';
+import { ThemeContextProvider } from 'contexts/ThemeContext';
 
-export default function Main() {
+import { Provider } from 'react-redux';
+import { store } from 'store/store';
+import { registerRootComponent } from 'expo';
 
+
+const Main = () => {
 	return (
 		<ThemeContextProvider>
 			<App />
 		</ThemeContextProvider>
 	);
 }
+
+export default registerRootComponent(Main);
+
 
 const styles = StyleSheet.create({
 	container: {

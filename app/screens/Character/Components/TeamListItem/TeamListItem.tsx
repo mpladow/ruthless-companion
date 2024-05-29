@@ -12,7 +12,11 @@ const TeamListItem = ({ item }: { item: TeamListItemType }) => {
 	const { currentTheme: { colors } } = useCustomTheme();
 
 	return (
-		<Card onPress={() => console.log("TODO: Navigate to darteam page")} style={{ borderRadius: BorderRadius.md, paddingTop: padding.lg, paddingBottom: padding.lg, backgroundColor: colors.card }}>
+		<Card onPress={() => console.log("TODO: Navigate to darteam page")} style={{
+			borderRadius: BorderRadius.md,
+			paddingTop: padding.lg,
+			paddingBottom: padding.lg, backgroundColor: colors.card
+		}}>
 			<Box style={{ flex: 1, flexDirection: "row" }}>
 				<Box style={{ flex: 1, flexDirection: 'column' }}>
 					<ThemedText type='defaultSemiBold'>{item.name}</ThemedText>

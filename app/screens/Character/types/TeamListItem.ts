@@ -1,7 +1,6 @@
 export type TeamListItemType = {
-	teamListId: string;
+	posseId: string;
 	name: string;
 	numberOfCharacters: number;
-	colorThemeId?: number;
-	fontThemeId?: number;
+	colorThemeId?: string;
 }

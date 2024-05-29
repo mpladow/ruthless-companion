@@ -10,27 +10,23 @@ import { FontAwesome6 } from '@expo/vector-icons';
 const HomeTab = createBottomTabNavigator();
 
 const MainTabNavigator = () => {
-	const { theme, currentTheme } = useCustomTheme();
+	const { currentTheme } = useCustomTheme();
 
 	return (
-		<NavigationContainer independent={true} theme={currentTheme}>
-			<HomeTab.Navigator screenOptions={
-				{
-					tabBarActiveTintColor: currentTheme.colors.tabIconSelected,
-					tabBarInactiveTintColor: currentTheme.colors.tabIconDefault,
-					headerShown: false,
-					tabBarStyle: { backgroundColor: currentTheme.colors.background, borderTopColor: currentTheme.colors.card },
-				}}>
-				<HomeTab.Screen name="CharacterStack" component={CharacterStack}
-					options={{
-						tabBarLabel: "Characters",
-						tabBarIcon: ({ focused, color }) => <FontAwesome6 name="people-line" size={24} color={focused ? currentTheme.colors.tabIconSelected : currentTheme.colors.tabIconDefault} />
-					}} />
-			</HomeTab.Navigator>
-		</NavigationContainer >
+		<HomeTab.Navigator screenOptions={
+			{
+				tabBarActiveTintColor: currentTheme.colors.tabIconSelected,
+				tabBarInactiveTintColor: currentTheme.colors.tabIconDefault,
+				headerShown: false,
+				tabBarStyle: { backgroundColor: currentTheme.colors.background, borderTopColor: currentTheme.colors.card },
+			}}>
+			<HomeTab.Screen name="CharacterStack" component={CharacterStack}
+				options={{
+					tabBarLabel: "Characters",
+					tabBarIcon: ({ focused, color }) => <FontAwesome6 name="people-line" size={24} color={focused ? currentTheme.colors.tabIconSelected : currentTheme.colors.tabIconDefault} />
+				}} />
+		</HomeTab.Navigator>
 	)
 }
 
 export default MainTabNavigator
-
-const styles = StyleSheet.create({})

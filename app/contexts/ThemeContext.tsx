@@ -38,7 +38,6 @@ export const ThemeContextProvider = ({ children }: { children: React.ReactNode }
 	const [theme, setTheme] = useState<"light" | "dark">("dark")
 	const [currentTheme, setCurrentTheme] = useState<CustomTheme>(LightTheme)
 	const handleSetTheme = () => {
-		console.log(theme, 'old theme')
 		if (theme == "light") {
 			setTheme("dark");
 		}
@@ -65,8 +64,6 @@ export const ThemeContextProvider = ({ children }: { children: React.ReactNode }
 	}, [])
 
 	useEffect(() => {
-		console.log(theme, 'current theme')
-
 		AsyncStorage.setItem(PersistenceKeys.THEME_KEY, JSON.stringify(theme));
 	}, [theme])
 
