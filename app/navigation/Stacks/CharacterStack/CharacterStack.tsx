@@ -3,8 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { useCustomTheme } from 'contexts/ThemeContext';
 
 import React from 'react'
-import CharacterHome from 'screens/Character/CharacterHome';
 import { padding } from 'constants/padding';
+import CharacterHome from 'screens/Character/CharacterHome/CharacterHome';
 
 const Stack = createStackNavigator();
 const CharacterStack = () => {

@@ -1,14 +1,15 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Box from '@components/Box/Box'
+import Box, { BoxProps } from '@components/Box/Box'
+import { padding } from 'constants/padding'
 
 
 export type PageContainerType = {
 
-} & React.PropsWithChildren
-const PageContainer = ({ children }: PageContainerType) => {
+} & React.PropsWithChildren & BoxProps
+const PageContainer = ({ style, children }: PageContainerType) => {
 	return (
-		<Box>
+		<Box style={[{ paddingHorizontal: padding.xl }, style]}>
 			{children}
 		</Box>
 	)

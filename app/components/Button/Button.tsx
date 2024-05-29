@@ -21,7 +21,10 @@ ${(props) => props.variant == "primary" &&
 		css`
 		background-color: ${props.theme.colors.primary};
 ` } ;
-
+${(props) => props.variant == "secondary" &&
+		css`
+		background-color: ${props.theme.colors.secondary};
+` } ;
 ${(props) => props.variant == "danger" &&
 		css`
 		background-color:  ${props.theme.colors?.danger};

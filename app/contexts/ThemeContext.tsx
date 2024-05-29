@@ -7,9 +7,13 @@ import { LightTheme } from 'theme/LightTheme';
 
 interface CustomColors {
 	primary: string;
+	secondary: string;
+	tertiary: string;
 	background: string;
 	card: string;
+	cardLight: string;
 	text: string;
+	textLight: string;
 	border: string;
 	notification: string;
 	danger: string;
@@ -17,6 +21,7 @@ interface CustomColors {
 	disabled: string;
 	tabIconDefault: string,
 	tabIconSelected: string,
+	buttonPrimary: string
 }
 export interface CustomTheme {
 	dark: boolean;
