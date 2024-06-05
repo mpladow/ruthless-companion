@@ -1,39 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
-import App from './App';
-import { NavigationContainer } from '@react-navigation/native';
-import { ThemeContextProvider, useCustomTheme } from 'contexts/ThemeContext';
-import { useCallback, useEffect, useMemo } from 'react';
-import { DarkTheme } from 'theme/DarkTheme';
-import { LightTheme } from 'theme/LightTheme';
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+import { Redirect } from 'expo-router'
 
-export default function Main() {
-
+const StartPage = () => {
 	return (
-		<ThemeContextProvider>
-			<App />
-		</ThemeContextProvider>
-	);
+		<Redirect href="/posses" />
+	)
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: "center",
-		padding: 24,
-	},
-	main: {
-		flex: 1,
-		justifyContent: "center",
-		maxWidth: 960,
-		marginHorizontal: "auto",
-	},
-	title: {
-		fontSize: 64,
-		fontWeight: "bold",
+export default StartPage
 
-	},
-	subtitle: {
-		fontSize: 36,
-		color: "#38434D",
-	},
-});
+const styles = StyleSheet.create({})
