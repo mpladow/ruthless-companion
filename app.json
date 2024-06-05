@@ -31,7 +31,9 @@
       "typedRoutes": true
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font",
+      "expo-asset"
     ]
   }
 }
