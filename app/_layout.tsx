@@ -1,8 +1,3 @@
-import {
-  DarkTheme,
-  DefaultTheme,
-  ThemeProvider,
-} from "@react-navigation/native";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
@@ -10,7 +5,7 @@ import "react-native-reanimated";
 import { ThemeContextProvider } from "../contexts/ThemeContext";
 import { store } from "../store/store";
 import { Provider } from "react-redux";
-import { useFonts } from 'expo-font';
+import { useFonts } from "expo-font";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -24,7 +19,7 @@ export default function RootLayout() {
   useEffect(() => {
     console.log("🚀 ~ RootLayout ~ error:", error);
     console.log("🚀 ~ useEffect ~ loaded:", fontsLoaded);
-    if (fontsLoaded == false) {
+    if (fontsLoaded === false) {
     }
   }, [fontsLoaded, error]);
 
