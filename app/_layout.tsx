@@ -19,6 +19,7 @@ export default function RootLayout() {
   useEffect(() => {
     console.log("🚀 ~ RootLayout ~ error:", error);
     console.log("🚀 ~ useEffect ~ loaded:", fontsLoaded);
+    let x = 1;
     if (fontsLoaded === false) {
     }
   }, [fontsLoaded, error]);
