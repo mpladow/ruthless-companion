@@ -3,7 +3,7 @@ import { posseSlice } from './posseList/posse.reducer'
 
 export const store = configureStore({
 	reducer: {
-		// posseState: posseSlice.reducer
+		posseState: posseSlice.reducer
 	}
 })
 
