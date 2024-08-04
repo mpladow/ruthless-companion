@@ -1,9 +1,9 @@
-import { Character } from './Character';
+import { Character } from "./Character";
 
 export interface Posse {
-	posseId: string;
-	name: string;
-	createdAt: Date;
-	characters: Character[];
-	colorThemeId: string;
+  posseId: string;
+  name: string;
+  createdAt: Date;
+  characters: Character[];
+  colorThemeId: string;
 }

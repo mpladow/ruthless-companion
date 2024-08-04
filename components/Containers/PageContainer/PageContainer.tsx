@@ -1,20 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import Box, { BoxProps } from '../../Box/Box'
-import { padding } from '../../../constants/padding'
+import React from "react";
+import Box, { BoxProps } from "../../Box/Box";
+import { padding } from "../../../constants/padding";
 
-
-export type PageContainerType = {
-
-} & React.PropsWithChildren & BoxProps
+export type PageContainerType = {} & React.PropsWithChildren & BoxProps;
 const PageContainer = ({ style, children }: PageContainerType) => {
-	return (
-		<Box style={[{ paddingHorizontal: padding.xl }, style]}>
-			{children}
-		</Box>
-	)
-}
+  return (
+    <Box style={[{ paddingHorizontal: padding.xl, height: "100%" }, style]}>
+      {children}
+    </Box>
+  );
+};
 
-export default PageContainer
-
-const styles = StyleSheet.create({})
+export default PageContainer;

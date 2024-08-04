@@ -5,17 +5,16 @@ import { ThemedText } from "../../../components/Text/ThemedText";
 import { useGetTeamList } from "../../../hooks/useGetTeamList";
 import { useLocalSearchParams, useNavigation } from "expo-router";
 import { Posse as PosseType } from "../../../data/schema/Posse";
+
 const Posse = () => {
   const { posseId } = useLocalSearchParams();
-  console.log(posseId, "POSSEE ID");
   const { getTeamById } = useGetTeamList();
   const nav = useNavigation();
   const [team, setTeam] = useState<PosseType>();
+
   useEffect(() => {
-    console.log("CHANGING NAME");
     if (posseId !== undefined) {
       const _team = getTeamById(posseId as string);
-      console.log(_team);
       setTeam(_team);
       nav.setOptions({ title: _team?.name });
     }

@@ -6,14 +6,14 @@ import { ThemedText } from "../../../components/Text/ThemedText";
 import { padding } from "../../../constants/padding";
 import { useCustomTheme } from "../../../contexts/ThemeContext";
 import { useGetTeamList } from "../../../hooks/useGetTeamList";
-import { Slot, useNavigation, useRouter } from "expo-router";
+import { Slot, useRouter } from "expo-router";
 import React from "react";
 import TeamList from "../../../components/screens/Components/TeamList/TeamList";
 
 const CharacterHome = () => {
   const { handleSetTheme } = useCustomTheme();
   // get data from api
-  const { getTeamList } = useGetTeamList();
+  const { getTeamListSimpleFormat } = useGetTeamList();
 
   const {
     currentTheme: { colors },
@@ -21,6 +21,10 @@ const CharacterHome = () => {
   const router = useRouter();
   const handleTeamListItemPress = (id: string) => {
     router.push(`../posses/${id}`);
+  };
+
+  const handleCreateCharacterPress = () => {
+    router.push(`../posses/CreateCharacter`);
   };
 
   return (
@@ -32,7 +36,7 @@ const CharacterHome = () => {
       </View>
       {/* Pull into seperate FlatList component */}
       <TeamList
-        data={getTeamList()}
+        data={getTeamListSimpleFormat()}
         onTeamListPress={handleTeamListItemPress}
       />
       <View style={{ paddingTop: padding.lg, flexDirection: "row" }}>
@@ -48,7 +52,7 @@ const CharacterHome = () => {
         <ButtonWrapper fullWidth={false} centered>
           <Card
             style={{ backgroundColor: colors.cardLight }}
-            onPress={() => handleSetTheme()}
+            onPress={() => handleCreateCharacterPress()}
           >
             <ThemedText>Create New Character</ThemedText>
           </Card>
